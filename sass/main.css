@@ -1,3 +1,134 @@
+/*General*/
 body {
-  height: 0px;
+  margin: 0px;
+}
+
+* {
+  font-family: "raleway", sans-serif;
+}
+
+/*header*/
+.background_logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.background_logo .logo {
+  width: 50%;
+  padding: 14px 0px 13px 0px;
+  gap: -0.5px;
+  max-width: 35%;
+}
+
+.form_town {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0 20px 0;
+  background: var(--Grey-2, #eaeaea);
+}
+.form_town i {
+  display: flex;
+  justify-content: center;
+  font-size: 1.15rem;
+  color: #353535;
+  margin-right: 2%;
+}
+
+.form_town input {
+  border: none;
+  font-size: 1.15rem;
+  background: none;
+}
+
+/*titre du site*/
+.section_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  padding: 2.5rem 0;
+  background: #f6f6f6;
+}
+.section_title h1 {
+  font-size: 1.5rem;
+  width: 100%;
+  height: 68px;
+  text-align: center;
+}
+.section_title p {
+  text-align: center;
+  font-weight: 300;
+  font-size: 18px;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+.section_title .btn_title {
+  display: inline-flex;
+  background-image: linear-gradient(0deg, hsl(267, 66%, 60%), hsl(317, 100%, 74%));
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  padding: 13px 19px;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-family: "roboto" sans-serif;
+  font-size: 16px;
+}
+
+/*fonctonnement du site*/
+.Fonctionnement {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Fonctionnement .card_number {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  background: var(--Background, #f6f6f6);
+}
+.Fonctionnement .card_number .content_number {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 2rem;
+}
+.Fonctionnement .card_number .number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #9356dc;
+  border-radius: 50px;
+  width: 25%;
+  color: #fff;
+}
+
+/*cards des restaurants*/
+.card_menu {
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  width: 100%;
+  font-size: 90%;
+}
+.card_menu img {
+  width: 100%;
+  height: 126px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+
+/*footer*/
+footer {
+  background: var(--Grey, #353535);
 }/*# sourceMappingURL=main.css.map */
