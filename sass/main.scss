@@ -5,7 +5,7 @@ body {
 }
 
 * {
-    font-family: "raleway", sans-serif;
+    font-family: "roboto", sans-serif;
 }
 
 /*header*/
@@ -18,7 +18,6 @@ body {
     .logo {
         width: 50%;
         padding: 14px 0px 13px 0px;
-        gap: -0.5px;
         max-width: 35%;
     }
 }
@@ -82,7 +81,6 @@ body {
         border: none;
         color: #fff;
         font-weight: 500;
-        font-family: "roboto" sans-serif;
         font-size: 16px;
     }
 }
@@ -90,49 +88,67 @@ body {
 /*fonctonnement du site*/
 
 .Fonctionnement {
+    padding-left: 5%;
+}
+.card_number {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    .card_number {
+    padding-right: 10%;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    background: var(--Background, #f6f6f6);
+    .circle_number {
         display: flex;
         justify-content: center;
-        padding: 2rem;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-        border-radius: 20px;
-        background: var(--Background, #f6f6f6);
-        .content_number {
+        align-items: center;
+        background: var(--Primary, #9356dc);
+        width: 24px;
+        height: 24px;
+        border-radius: 50px;
+        font-size: 12px;
+    }
+    p {
+        display: flex;
+        align-items: center;
+
+        color: #fff;
+        i {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            width: 100%;
-            gap: 2rem;
-        }
-        .number {
-            display: flex;
-            justify-content: center;
             align-items: center;
-            background: #9356dc;
-            border-radius: 50px;
-            width: 25%;
-            color: #fff;
+            padding: 10px;
+            color: var(--grey-tint-4, #7e7e7e);
         }
     }
+}
+.content_number {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 2rem;
 }
 
 /*cards des restaurants*/
 
-.card_menu {
-    background-color: white;
-    border-radius: 20px;
-    padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    width: 100%;
-    font-size: 90%;
-    img {
+.content_restaurants {
+    background: #f6f6f6;
+}
+.restaurants {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(209px, 10fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    .card_menu {
+        background-color: white;
+        border-radius: 20px;
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
         width: 100%;
-        height: 126px;
-        object-fit: cover;
-        border-radius: 20px 20px 0px 0px;
+        font-size: 90%;
+        img {
+            width: 100%;
+            height: 126px;
+            object-fit: cover;
+            border-radius: 20px 20px 0px 0px;
+        }
     }
 }
 

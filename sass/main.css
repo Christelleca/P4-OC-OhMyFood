@@ -4,7 +4,7 @@ body {
 }
 
 * {
-  font-family: "raleway", sans-serif;
+  font-family: "roboto", sans-serif;
 }
 
 /*header*/
@@ -17,7 +17,6 @@ body {
 .background_logo .logo {
   width: 50%;
   padding: 14px 0px 13px 0px;
-  gap: -0.5px;
   max-width: 35%;
 }
 
@@ -76,51 +75,70 @@ body {
   border: none;
   color: #fff;
   font-weight: 500;
-  font-family: "roboto" sans-serif;
   font-size: 16px;
 }
 
 /*fonctonnement du site*/
 .Fonctionnement {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  padding-left: 5%;
 }
-.Fonctionnement .card_number {
+
+.card_number {
   display: flex;
   justify-content: center;
-  padding: 2rem;
+  padding-right: 10%;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   background: var(--Background, #f6f6f6);
 }
-.Fonctionnement .card_number .content_number {
+.card_number .circle_number {
   display: flex;
   justify-content: center;
+  align-items: center;
+  background: var(--Primary, #9356dc);
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  font-size: 12px;
+}
+.card_number p {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.card_number p i {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: var(--grey-tint-4, #7e7e7e);
+}
+
+.content_number {
+  display: flex;
   flex-wrap: wrap;
   width: 100%;
   gap: 2rem;
 }
-.Fonctionnement .card_number .number {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #9356dc;
-  border-radius: 50px;
-  width: 25%;
-  color: #fff;
-}
 
 /*cards des restaurants*/
-.card_menu {
+.content_restaurants {
+  background: #f6f6f6;
+}
+
+.restaurants {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(209px, 10fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+}
+.restaurants .card_menu {
   background-color: white;
   border-radius: 20px;
-  padding: 5px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   width: 100%;
   font-size: 90%;
 }
-.card_menu img {
+.restaurants .card_menu img {
   width: 100%;
   height: 126px;
   -o-object-fit: cover;
