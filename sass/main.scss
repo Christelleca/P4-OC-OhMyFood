@@ -13,12 +13,22 @@ body {
 .background_logo {
     display: flex;
     justify-content: center;
-    width: 100%;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    padding: 14px 0px 13px 0px;
+    height: 63px;
+    flex-shrink: 0;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    @media (min-width: 1440px) {
+        padding: 30px 0px 31.798px 0px;
+    }
+
     .logo {
-        width: 50%;
-        padding: 14px 0px 13px 0px;
-        max-width: 35%;
+        width: 197px;
+        height: 36px;
+        @media (min-width: 1440px) {
+            max-width: 200px;
+            max-height: 34.202px;
+        }
     }
 }
 
@@ -34,14 +44,18 @@ body {
         justify-content: center;
         font-size: 1.15rem;
         color: #353535;
-        margin-right: 2%;
     }
-}
-
-.form_town input {
-    border: none;
-    font-size: 1.15rem;
-    background: none;
+    input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: none;
+        font-size: 1.15rem;
+        background: none;
+        width: 140px;
+        font-weight: 500;
+    }
 }
 
 /*titre du site*/
@@ -56,10 +70,11 @@ body {
     padding: 2.5rem 0;
     background: #f6f6f6;
     h1 {
-        font-size: 1.5rem;
-        width: 100%;
-        height: 68px;
         text-align: center;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
     }
     p {
         text-align: center;
@@ -69,7 +84,9 @@ body {
         margin: 0;
     }
     .btn_title {
-        display: inline-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-image: linear-gradient(
             0deg,
             hsl(267, 66%, 60%),
@@ -82,42 +99,55 @@ body {
         color: #fff;
         font-weight: 500;
         font-size: 16px;
+        width: 218px;
+        height: 50px;
     }
 }
 
 /*fonctonnement du site*/
 
+.nav-fonctionnement {
+    margin: 20px;
+}
 .Fonctionnement {
-    padding-left: 5%;
+    padding: 50px 0px 25px 5%;
 }
 .card_number {
     display: flex;
     justify-content: center;
-    padding-right: 10%;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    width: 322.486px;
+    height: 72.379px;
+    padding-right: 8%;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     background: var(--Background, #f6f6f6);
-    .circle_number {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: var(--Primary, #9356dc);
-        width: 24px;
-        height: 24px;
-        border-radius: 50px;
-        font-size: 12px;
+    h2 {
+        font-size: 16px;
+        font-weight: 500;
     }
+    i {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        color: var(--grey-tint-4, #7e7e7e);
+    }
+}
+
+.circle_number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--Primary, #9356dc);
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    font-size: 12px;
+    margin-left: -120px;
     p {
         display: flex;
         align-items: center;
-
         color: #fff;
-        i {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            color: var(--grey-tint-4, #7e7e7e);
-        }
     }
 }
 .content_number {
@@ -131,6 +161,8 @@ body {
 
 .content_restaurants {
     background: #f6f6f6;
+    margin-top: 30px;
+    margin-bottom: 0px;
 }
 .restaurants {
     display: grid;
