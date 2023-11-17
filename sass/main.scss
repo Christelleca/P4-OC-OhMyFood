@@ -16,7 +16,7 @@ body {
     align-items: center;
     padding: 14px 0px 13px 0px;
     height: 63px;
-    flex-shrink: 0;
+    position: relative;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     @media (min-width: 1440px) {
         padding: 30px 0px 31.798px 0px;
@@ -67,7 +67,7 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
-    padding: 2.5rem 0;
+    padding: 30px 0 30px;
     background: #f6f6f6;
     h1 {
         text-align: center;
@@ -75,6 +75,7 @@ body {
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        margin-top: 0;
     }
     p {
         text-align: center;
@@ -92,7 +93,7 @@ body {
             hsl(267, 66%, 60%),
             hsl(317, 100%, 74%)
         );
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
         border-radius: 25px;
         padding: 13px 19px;
         border: none;
@@ -107,79 +108,96 @@ body {
 /*fonctonnement du site*/
 
 .nav-fonctionnement {
-    margin: 20px;
-}
-.Fonctionnement {
-    padding: 50px 0px 25px 5%;
-}
-.card_number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 322.486px;
-    height: 72.379px;
-    padding-right: 8%;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    border-radius: 20px;
-    background: var(--Background, #f6f6f6);
-    h2 {
-        font-size: 16px;
-        font-weight: 500;
-    }
-    i {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        color: var(--grey-tint-4, #7e7e7e);
-    }
+    padding: 55px;
 }
 
-.circle_number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--Primary, #9356dc);
-    width: 24px;
-    height: 24px;
-    border-radius: 50px;
-    font-size: 12px;
-    margin-left: -120px;
-    p {
-        display: flex;
-        align-items: center;
-        color: #fff;
-    }
-}
 .content_number {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     gap: 2rem;
+    .card_number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 394px;
+        height: 72.379px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        background: var(--Background, #f6f6f6);
+
+        .circle_number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--Primary, #9356dc);
+            width: 24px;
+            height: 24px;
+            border-radius: 50px;
+            font-size: 12px;
+            margin-left: -181px;
+
+            p {
+                display: flex;
+                align-items: center;
+                color: #fff;
+            }
+        }
+        h2 {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        i {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            color: var(--grey-tint-4, #7e7e7e);
+        }
+    }
 }
 
 /*cards des restaurants*/
 
 .content_restaurants {
     background: #f6f6f6;
-    margin-top: 30px;
-    margin-bottom: 0px;
+    padding: 5%;
 }
 .restaurants {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(209px, 10fr));
-    grid-template-rows: repeat(2, 1fr);
-    gap: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 100%;
+    a {
+        text-decoration: none;
+        color: black;
+    }
     .card_menu {
         background-color: white;
-        border-radius: 20px;
+        border-radius: 15px;
         filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-        width: 100%;
-        font-size: 90%;
+        width: 600px;
         img {
             width: 100%;
-            height: 126px;
+            height: 200px;
             object-fit: cover;
-            border-radius: 20px 20px 0px 0px;
+            border-radius: 15px 15px 0px 0px;
+        }
+        .badge_nouveau {
+            background-color: #99e2d0;
+            color: #1b6150;
+            padding: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .title_card {
+            padding-left: 15px;
+        }
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 }
@@ -187,5 +205,44 @@ body {
 /*footer*/
 
 footer {
+    color: #f6f6f6;
     background: var(--Grey, #353535);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    h4 {
+        font-family: Shrikhand, "cursive";
+    }
+    a {
+        text-decoration: none;
+        color: #f6f6f6;
+    }
+}
+
+/******* style des autres pages *******/
+
+/*image du haut de page*/
+
+.img-top {
+    width: 100%;
+    img {
+        width: 100%;
+        height: 336px;
+        object-fit: cover;
+    }
+}
+
+.background-main {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    .menu {
+        border-radius: 25px 25px 0 0;
+        margin-top: -50px;
+        background-color: #f6f6f6;
+        position: relative;
+        width: 1000px;
+    }
 }
