@@ -1,0 +1,255 @@
+/**************entête de toutes les pages**************/
+
+.background_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 0px 13px 0px;
+    height: 63px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    @media (min-width: 1440px) {
+        padding: 30px 0px 31.798px 0px;
+    }
+
+    .logo {
+        width: 197px;
+        height: 36px;
+        @media (min-width: 1440px) {
+            max-width: 200px;
+            max-height: 34.202px;
+        }
+    }
+}
+
+/************************Bare de recherche ville***********/
+
+.form__city {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0 20px 0;
+    background: var(--Grey-2, #eaeaea);
+    i {
+        display: flex;
+        justify-content: center;
+        font-size: 1.15rem;
+        color: #353535;
+    }
+    input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: none;
+        font-size: 1.15rem;
+        background: none;
+        width: 140px;
+        font-weight: 500;
+    }
+}
+
+/************************footer***************************/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    color: #f6f6f6;
+    background: var(--Grey, #353535);
+    padding: 24px;
+    @media (min-width: 768px) {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    h4 {
+        font-family: Shrikhand, "cursive";
+        padding-right: 10px;
+        font-size: 21px;
+        font-weight: 300;
+        margin: 5px 0px 20px;
+        @media (min-width: 768px) {
+            margin: 0 40px 10px;
+        }
+    }
+    .footer__link {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @media (min-width: 768px) {
+            align-items: center;
+            flex-direction: row;
+            margin-right: 80px;
+            gap: 15px;
+        }
+    }
+
+    i {
+        padding-right: 10px;
+    }
+    a {
+        padding: 3px;
+        color: #f6f6f6;
+        @media (min-width: 920px) {
+            padding: 15px;
+        }
+    }
+}
+
+/****************** animations loader ***********************/
+
+/**** loader page d'accueil ****/
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #f6f6f6;
+    opacity: 0.9;
+    z-index: 2;
+    animation: end-animation 2.7s;
+    animation-fill-mode: forwards;
+    @keyframes end-animation {
+        0% {
+            opacity: 0.9;
+        }
+        50% {
+            opacity: 0.8;
+        }
+        100% {
+            opacity: 0;
+            display: none;
+        }
+    }
+    .lettre {
+        color: #9356dc;
+        font-size: -webkit-xxx-large;
+        font-family: Shrikhand, "cursive";
+        animation: shine 1.2s;
+        animation-fill-mode: forwards;
+        @keyframes shine {
+            0% {
+                color: #9356dc;
+                text-shadow: 0 0 7px #99e2d0;
+            }
+            90% {
+                color: #99e2d0;
+                text-shadow: none;
+            }
+            100% {
+                color: #9356dc;
+                text-shadow: 0 0 7px #99e2d0;
+            }
+        }
+    }
+    .lettre:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+    .lettre:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    .lettre:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+    .lettre:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+    .lettre:nth-child(4) {
+        animation-delay: 0.5s;
+    }
+    .lettre:nth-child(5) {
+        animation-delay: 0.6s;
+    }
+    .lettre:nth-child(6) {
+        animation-delay: 0.7s;
+    }
+    .lettre:nth-child(7) {
+        animation-delay: 0.8s;
+    }
+    .lettre:nth-child(8) {
+        animation-delay: 0.9s;
+    }
+}
+
+/**** loader page menu ****/
+
+.content__menu {
+    animation: slide 1s ease-in-out;
+    @keyframes slide {
+        0% {
+            opacity: 0;
+            transform: translateX(50%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+.content__menu:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.content__menu:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.content__menu:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.content__menu:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/******************** Animation bouton et coeur *******************/
+
+/*** animation bouton explorer nos restaurants ***/
+
+.btn_title {
+    transition: all 0.4s;
+    &:hover {
+        opacity: 0.7;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+
+/*** animation coeur des restaurants favoris ***/
+.card__restaurant + .heart__menu {
+    .fa-solid {
+        opacity: 0;
+        color: transparent;
+        background-clip: text;
+        transition: all 0.4s ease-in-out;
+        background-image: $degrade-coeur;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+/******* page restaurant ********/
+
+/*** animation validation menu ***/
+.card__menu {
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+        .section__prix {
+            transform: translateX(0px);
+        }
+    }
+}
+.section__prix {
+    transform: translateX(45px);
+    transition: all 0.4s;
+}
+/*** animation bouton validation menu commandé ***/
+
+.btn_submite {
+    transition: all 0.4s;
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+    }
+}
