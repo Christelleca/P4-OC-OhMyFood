@@ -1,12 +1,10 @@
 /**************entête de toutes les pages**************/
 
 .background_logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexMid;
     padding: 14px 0px 13px 0px;
     height: 63px;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: $shadow;
     @media (min-width: 1440px) {
         padding: 30px 0px 31.798px 0px;
     }
@@ -24,9 +22,7 @@
 /************************Bare de recherche ville***********/
 
 .form__city {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexMid;
     width: 100%;
     padding: 20px 0 20px 0;
     background: var(--Grey-2, #eaeaea);
@@ -37,9 +33,7 @@
         color: #353535;
     }
     input {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexMid;
         text-align: center;
         border: none;
         font-size: 1.15rem;
@@ -101,9 +95,7 @@ footer {
 /**** loader page d'accueil ****/
 
 .loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexMid;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -204,31 +196,20 @@ footer {
 
 /******************** Animation bouton et coeur *******************/
 
-/*** animation bouton explorer nos restaurants ***/
-
-.btn_title {
-    transition: all 0.4s;
-    &:hover {
-        opacity: 0.7;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-    }
-}
-
 /*** animation coeur des restaurants favoris ***/
-.card__restaurant + .heart__menu {
+.card__restaurant {
     .fa-solid {
-        opacity: 0;
-        color: transparent;
-        background-clip: text;
-        transition: all 0.4s ease-in-out;
-        background-image: $degrade-coeur;
-        &:hover {
-            opacity: 1;
-        }
+        @include color-heart;
     }
 }
 
 /******* page restaurant ********/
+
+.heart__menu {
+    .fa-solid {
+        @include color-heart;
+    }
+}
 
 /*** animation validation menu ***/
 .card__menu {
@@ -244,12 +225,12 @@ footer {
     transform: translateX(45px);
     transition: all 0.4s;
 }
-/*** animation bouton validation menu commandé ***/
+/*** animation bouton ***/
 
 .btn_submite {
     transition: all 0.4s;
     &:hover {
-        opacity: 0.8;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+        opacity: 0.7;
+        box-shadow: $shadow;
     }
 }

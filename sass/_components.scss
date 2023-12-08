@@ -1,20 +1,3 @@
-/************************ bouton explorer nos restaurants page d'accueil ***************************/
-
-.btn_title {
-    background: $degrade-btn;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-    padding: 13px 19px;
-    border: none;
-    color: #fff;
-    font-weight: 500;
-    font-size: 16px;
-    width: 218px;
-    height: 50px;
-    position: relative;
-    cursor: pointer;
-}
-
 /****************** Bouton de validation du menu commandé page menu ***********************/
 .btn_submite {
     background-image: $degrade-btn;
