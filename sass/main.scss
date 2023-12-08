@@ -1,5 +1,5 @@
-@import "abstracts";
-@import "components";
+@import "mixins";
+@import "boutons";
 @import "layout";
 @import "base";
 
@@ -51,7 +51,7 @@
             background: var(--Background, #f6f6f6);
             .circle__number {
                 @include flexMid;
-                background: var(--Primary, #9356dc);
+                background: var(--Primary, $purple);
                 width: 24px;
                 height: 24px;
                 border-radius: 50px;
@@ -99,7 +99,7 @@
                 border-radius: 15px 15px 0px 0px;
             }
             .badge_nouveau {
-                background-color: #99e2d0;
+                background-color: $turquoise;
                 color: #1b6150;
                 padding: 10px;
                 position: absolute;
@@ -157,7 +157,7 @@
 
 .subtitle {
     width: 33px;
-    border-bottom: 5px solid #99e2d0;
+    border-bottom: 5px solid $turquoise;
     margin-left: 15px;
     p {
         margin-bottom: 5px;
@@ -233,7 +233,7 @@
             span {
                 height: 100%;
                 width: 45px;
-                background-color: #99e2d0;
+                background-color: $turquoise;
                 i {
                     @include flexMid;
                     height: 100%;

@@ -117,23 +117,23 @@ footer {
         }
     }
     .lettre {
-        color: #9356dc;
+        color: $purple;
         font-size: -webkit-xxx-large;
         font-family: Shrikhand, "cursive";
         animation: shine 1.2s;
         animation-fill-mode: forwards;
         @keyframes shine {
             0% {
-                color: #9356dc;
-                text-shadow: 0 0 7px #99e2d0;
+                color: $purple;
+                text-shadow: 0 0 7px $turquoise;
             }
             90% {
                 color: #99e2d0;
                 text-shadow: none;
             }
             100% {
-                color: #9356dc;
-                text-shadow: 0 0 7px #99e2d0;
+                color: $purple;
+                text-shadow: 0 0 7px $turquoise;
             }
         }
     }
